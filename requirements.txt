@@ -1,1 +1,7 @@
 Flask
+requests
+firebase-admin
+jupyter
+pandas
+torch
+
