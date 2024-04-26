@@ -3,82 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firebase Data</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .timestamp {
-            white-space: nowrap;
-        }
-        a {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: #fff;
-            background-color: #007bff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-        a:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Mood Prediction</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Firebase Data</h1>
-        {% for user in user_data %}
-        <h2>{{ user.email }}</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Word</th>
-                    <th class="timestamp">Timestamp</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for word in user.words %}
-                <tr>
-                    <td>{{ word.word }}</td>
-                    <td class="timestamp">{{ word.timestamp }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        {% endfor %}
-        <a href="/download">Download All Data</a>
-    </div>
+    <h1>Mood Prediction</h1>
+    {% if results %}
+    <h2>Results</h2>
+    <p>Overall Mood: {{ results.overall_mood }}</p>
+    <p>Normal Percentage: {{ results.Normal_percentage }}%</p>
+    <p>Happiness Percentage: {{ results.happiness_percentage }}%</p>
+    <p>Sadness Percentage: {{ results.sadness_percentage }}%</p>
+    <p>Stress Percentage: {{ results.stress_percentage }}%</p>
+    {% endif %}
 </body>
 </html>

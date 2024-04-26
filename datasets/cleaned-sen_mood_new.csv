@@ -1,0 +1,264 @@
+,Sentence,Mood
+0,Mujhe aaj bahut khushi hai,Happy
+1,Mujhe uski yaad aa rahi hai,Sad
+2,Mujhe lagta hai sab theek hai,Normal
+3,Mujhe kaafi stress ho raha hai,Stressed
+4,Aaj ka din bahut achha tha,Happy
+5,Usne mujhe ignore kar diya,Sad
+6,Mujhe thoda bura lag raha hai,Normal
+7,Padhai bahut zyada ho rahi hai,Stressed
+8,Main aaj badi khush hoon,Happy
+9,Ghar par sab theek hai,Normal
+10,Mujhe kuch samajh nahi aa raha,Stressed
+11,Kal test hai,Stressed
+12,Mujhe uski yaad bahut aati hai,Sad
+13,Mujhe ghar jaana hai,Sad
+14,Mujhe lag raha hai mujhe bukhaar hai,Normal
+15,Padhai ka load zyada ho raha hai,Stressed
+16,Main aaj bohot khush hoon,Happy
+17,Usne mere saath dhoka kiya,Sad
+18,Aaj mausam bahut achha hai,Normal
+19,Mujhe test ke liye stress ho raha hai,Stressed
+20,Mujhe ppt ke liye stress ho raha hai,Stressed
+21,Mujhe aaj bohot accha laga,Happy
+22,Mujhe unka message nahi mila,Sad
+23,Mujhe thodi si bimar hai,Normal
+24,padhai samjhne mein mushkil ho rahi hai,Stressed
+25,Maine aaj shopping ki,Normal
+26,Usne mujhse jhoot bola,Sad
+27,Aaj sab kuch theek thaak hai,Normal
+28,Mujhe class mein zyada kaam mila hai,Stressed
+29,Arey boht sara padhna hai,Stressed
+31,Usne mujhe gift diya,Happy
+32,Mujhe thoda gussa aa raha hai,Normal
+33,Mujhe yahan acha nahi lag raha hai,Sad
+34,Aaj kaafi achha din tha,Happy
+35,Usne mere sapne tode,Sad
+36,Mujhe neend aa rahi hai,Normal
+37,Life mein tension ho rahi hai,Stressed
+38,Mujhe aaj party mein jaana hai,Happy
+39,Usne mere dil ko dukhaya,Sad
+40,Mujhe kuch samajh nahi aa raha hai,Stressed
+41,Mujhe office mein bahut pressure hai,Stressed
+43,Usne mujhe ignore kiya,Sad
+44,Mujhe ghar ki yaad aa rahi hai,Sad
+45,Kaam ka load zyada hai,Stressed
+46,Mujhe aaj kuch khushi nahi ho rahi,Sad
+47,Usne mera dil dukhaya,Sad
+48,Aaj kaafi normal din tha,Normal
+50,Mujhe aaj bahut achha laga,Happy
+51,Mujhe thoda bukhaar hai,Normal
+53,Usne mujhe gift diya,Happy
+55,Mujhe kaam karne mein tension ho rahi hai,Stressed
+57,Usne mujhe ignore kar diya,Sad
+58,Mujhe ghar jaana hai,Normal
+59,Rehne mein mushkil ho rahi hai,Stressed
+60,Maine aaj kuch naya seekha,Happy
+61,Usne mujhse baat nahi ki,Sad
+62,Backlog boht ho raha hai,Stressed
+64,Usne mujhe hurt kiya,Sad
+68,Mujhe aaj kuch samajh nahi aa raha,Normal
+69,Mujhe kaam mein tension ho rahi hai,Stressed
+71,Usne mere saath cheat kiya,Sad
+73,Kaam karne mein mushkil ho rahi hai,Stressed
+79,kuch samajh nahi aa raha,Stressed
+80,Kaam ka bojh zyada ho raha hai,Stressed
+81,Usne mujhe hurt bhot kiya,Sad
+82,Mujhe thoda bhot gussa aa raha hai,Normal
+83,Kaam karne mein maza aa raha hai,Happy
+87,Aaj ki subah bahut khushnuma thi,Happy
+88,Mujhe uski yaad bahut aa rahi hai,Sad
+89,Sab kuch normal lag raha hai,Normal
+90,Kaam ka pressure badh gya hai,Stressed
+91,Main aaj bada khush hoon,Happy
+92,Usne mujhe dukh diya,Sad
+93,kuch alag feel ho raha hai,Normal
+94,Coaching mein kaafi stress hai,Stressed
+95,Mujhe aaj bada khushi hua,Happy
+96,Ghar par sab kuch theek hai,Normal
+97,Mujhe ab samajh aaya,Normal
+98,Exams ki tension ho rahi hai,Stressed
+101,Thoda sa bimar lag raha hai,Normal
+102,sab theek hai,Normal
+103,test acha gaya,Happy
+104,rank gir gayi,Sad
+105,sahi chal raha hai,Normal
+106,padhai nahi ho pa rahi,Stressed
+107,room acha hai,Happy
+108,Uska message nahi aaya,Sad
+109,abhi to marks theek aye hain,Normal
+110,khana bilkul acha nahi hai,Stressed
+111,Aaj to mithai mili,Happy
+112,Usne sapne tod diye,Sad
+113,Neend aa rahi hai,Normal
+114,teacher ko padhana nahi ata,Stressed
+116,Yahan kaafi pressure hai,Stressed
+117,ghar ke khane ki yaad a rahi hai,Sad
+119,mann nahi lag raha,Sad
+120,Usne dhoka diya,Sad
+121,Din normal guzra,Normal
+122,Ghar jaana hai,Normal
+124,Kaam ka pressure badh raha hai,Stressed
+127,Gussa aa raha hai,Normal
+128,koi friend hi nahi hai,Stressed
+129,aaj teacher ne taareef kari,Happy
+130,Usne jhoot bola,Sad
+131,Mujhe tension ho rahi hai,Stressed
+132,friend ke sath ghumne gaya,Happy
+133,friend se ladai ho gayi,Sad
+134,coaching ke teacher hain,Normal
+135,teacher ne class ke bahar pakad liya,Stressed
+136,dost ne treat di,Happy
+138,friend ke sath rehta hun,Normal
+139,marks hi nahi aate,Stressed
+140,aj to coaching ka off tha,Happy
+141,coaching pe kisi ne suicide kar liya,Sad
+142,coaching sahi chal rahi hai,Normal
+143,padhne ka time nahi mil raha,Stressed
+144,coaching par party thi,Happy
+145,teacher ne dhyan hi nahi diya,Sad
+146,Mujhe aaj kuch alag feel ho raha hai,Normal
+147,class mein kaafi stress hai,Stressed
+148,aaj bahut khushi hai,Happy
+149,uski yaad aa rahi hai,Sad
+150,sab theek lag rahah hai,Normal
+151,kaafi stress ho raha hai,Stressed
+152,din bahut achha tha,Happy
+153,ignore kar diya usne mujhe,Sad
+154,Mujhe bura lag raha hai,Normal
+155,class me Padhai zyada ho rahi hai,Stressed
+156,Main aaj boht khush hoon,Happy
+157,Ghar me sab theek hai,Normal
+158,kal test hi hai,Stressed
+159,uski yaad bahut aati hai,Sad
+160,ghar jaana hai,Sad
+161,mujhe bukhaar tha,Normal
+162,coaching me accha nahi padha rahe,Stressed
+163,aaj ka din accha gya,Happy
+165,mausam achha hai,Normal
+166,test ka stress hai,Stressed
+167,ppt nahi ban rahi hai,Stressed
+168,aaj jada accha laga,Happy
+169,unka message nahi aya,Sad
+170,main bimar hoon,Normal
+171,padhai nahi ho rahi hai,Stressed
+173,maine shopping ki,Normal
+174,Usne jhoot bola uske liye,Sad
+175,Aaj sab badiya hai,Normal
+176,class mai aaj zyada kaam hai,Stressed
+177,aaj bohot padhna hai,Stressed
+178,mujhe aaj bohot khushi mili,Happy
+179,mujhe gift mila,Happy
+180,Mujhe gussa aa raha hai,Normal
+181,yahan acha nahi lag raha hai,Sad
+182,Aaj ka din aacha tha,Happy
+183,tumne mere sapne tode,Sad
+184,neend aa rahi hai,Normal
+185,tension boht hai,Stressed
+186,aaj to party mein jaana hai,Happy
+188,life mein bahut pressure hai,Stressed
+189,Main badi khush hoon,Happy
+190,tumne mujhe ignore kiya,Sad
+191,aaj ghar ki yaad aa rahi hai,Sad
+192,project ka load zyada hai,Stressed
+193,life mein koi khushi nahi hai,Sad
+194,project chal hi nahi raha,Sad
+195,Aaj ka din normal tha,Normal
+196,Mujhe kaafi stress hai,Stressed
+197,aaj boht achha laga,Happy
+198,tumne mere saath cheat kiya,Sad
+199,Mujhe aaj bukhaar hai,Normal
+200,Kaam mein mushkil hai,Stressed
+201,Main aaj jyada khush hoon,Happy
+202,tumne mujhe gift diya,Happy
+203,Aaj ka din acha tha,Normal
+204,Mujhe kaam ki tension hai,Stressed
+205,Main aaj jyada khush hu,Happy
+206,Usne ignore kara,Sad
+207,Main ghar jaa raha hu,Normal
+208,yaha rehena bahut muskil hai,Stressed
+209,Maine aaj kuch accha seekha,Happy
+210,mujhse baat nahi ki,Sad
+211,Backlog boht ho gye,Stressed
+212,Main khush hoon aaj,Happy
+213,tumne mujhe hurt kiya,Sad
+214,Mujhe gussa bhot aata hai,Normal
+215,Aaj din achha tha,Happy
+216,tumne jhoot bola,Sad
+217,aaj kuch samajh nahi aa raha,Normal
+218,Mujhe boht tension ho rahi hai,Stressed
+219,Main bohot khush hoon aaj,Happy
+220,thoda bukhaar hai aaj,Normal
+221,Kaam mein boht mushkil hai,Stressed
+222,Mujhe bahut khushi hui,Happy
+223,mujhe ignore kiya usne,Sad
+224,Mujhe ghar jaana chahiye,Normal
+225,Kaam karne mein mushkil hai,Stressed
+226,Maine aaj accha seekha,Happy
+227,usne aaj baat nahi ki,Sad
+228,life samajh nahi aa rahi,Stressed
+229,Kaam ka bojh zyada hai,Stressed
+230,mujhe bhot hurt huaa,Sad
+231,bhot gussa aa raha hai,Normal
+232,Kaam main maza aa raha hai,Happy
+233,Aaj din badiya tha,Happy
+234,mujhse usne jhoot bola,Sad
+235,kaam ki tension hai,Stressed
+236,Aaj subah ka mausam aacha tha,Happy
+237,uski yaad boht aa rahi hai,Sad
+238,Sab kuch normal hai,Normal
+240,aaj mein boht khush hoon,Happy
+241,mein dukhi hoon,Sad
+242,aaj alag feel ho raha hai,Normal
+243,Coaching mein tension hai,Stressed
+245,ab samajh aaya,Normal
+246,Exams ki tension hai,Stressed
+247,ghar ki yaad aa rahi hai,Sad
+248,Thoda bimar hoon,Normal
+249,sab theek chal hai,Normal
+250,test sahi gaya,Happy
+251,rank aachi nahi aayi,Sad
+252,sb sahi hai,Normal
+253,padhai nahi kar pa rahi,Stressed
+254,room badiya hai,Happy
+255,teacher message nahi dekhte,Sad
+256,aaj marks aache hain,Normal
+257,khana acha nahi mil raha,Stressed
+258,Aaj khane mai mithai hai,Happy
+259,mere sapne tod diye,Sad
+260,Neend boht aati hain,Normal
+261,teacher ka samjh main nahi ata,Stressed
+262,aaj toh party hain,Happy
+263,Yahan kaafi tension hai,Stressed
+264,gharwalo ki yaad aa rahi hai,Sad
+266,mann nahi hain,Sad
+267,mujhe dhoka mila,Sad
+268,Din normal tha,Normal
+269,Usne mujhe cheat kiya,Sad
+270,coaching jaana hai,Normal
+271,Kaam mein mushkil ho rahi hai,Stressed
+272,Aaj kuch naya seekha,Happy
+273,maine aaj baat nahi ki,Sad
+274,thoda samajh nahi aa raha,Normal
+275,Kaam ka stress badh raha hai,Stressed
+276,Mujhe khushi ho rahi hain,Happy
+277,tumne mujhe bhot hurt kiya,Sad
+278,mein gussa hoon,Normal
+279,koi friend hi nahi mila,Stressed
+280,aaj meri taareef huyi,Happy
+282,mein tension mai hoon,Stressed
+283,friend se mila,Happy
+284,friend ne cheat kiya,Sad
+285,coaching ke teacher aache hain,Normal
+286,teacher ne class ke bahar dekh liya,Stressed
+287,dost ne party di,Happy
+288,tumne mujhse baat nahi ki,Sad
+289,friend ke sath hoon,Normal
+290,marks nahi aa rahe hain,Stressed
+291,aj to coaching nahi jana,Happy
+292,coaching mai suicide hua hain,Sad
+293,coaching theek chal rahi hai,Normal
+294,padhne ka time nahi hai,Normal
+295,coaching par party hogi,Happy
+296,teacher ka dhyan nahi diya,Sad
+298,class mein boht stress hai,Stressed

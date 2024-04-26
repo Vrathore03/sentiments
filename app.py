@@ -1,16 +1,13 @@
 
-import sys
-sys.path.append('src')
 from flask import Flask, render_template, request, redirect, url_for
 import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, auth, db
-from train import main as train_model
-from predict import predict_moods
-from utils import setup_logging, log_exception
-from models import MoodClassifier
-from src.datasets import MoodDataset
-import torch
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+import pickle
+import csv
+import io
 
 
 app = Flask(__name__)
@@ -23,6 +20,18 @@ firebase_admin.initialize_app(cred, {
 })
 # Get a reference to the Firebase Realtime Database
 ref = db.reference()
+
+
+# Load the dataset
+df = pd.read_csv('datasets/sen-mood.csv')
+
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(df['Sentence'])
+y = df['Mood']
+
+# Train the Naive Bayes model
+model = MultinomialNB()
+model.fit(X, y)
 
 @app.route('/')
 def home():
@@ -44,14 +53,6 @@ def login():
             print('login---- \n' , e)
     return render_template('login.html')
 
-@app.route('/train', methods=['POST'])
-def train():
-    try:
-        train_model()
-        return "Model trained successfully!"
-    except Exception as e:
-        # log_exception(e)
-        return "An error occurred while training the model.", 500
 
 @app.route('/typed_words', methods=['GET'])
 def typed_words():
@@ -77,38 +78,52 @@ def typed_words():
             })
 
         a_u_d = pd.DataFrame(all_user_data)
-        email = request.args.get('email')
-        email = email.replace('.', '_')  # Get email from query parameters
+        email = request.args.get('email') # Get email from query parameters
+        email = email.replace('.', '_')  
         row = a_u_d[a_u_d['email'] == email]
         word = pd.DataFrame(row['words'].iloc[0])
         print(word)
-
-        # Convert word lists to the required format
-        word_lists = word['word'].to_list()
-        print('word_lists -----> ' , word_lists)
-
-
-        data = pd.read_csv('dataset/hinglish_emotion_dataset.csv')
-        dataset = MoodDataset(data)
-        # Instantiate the model
-        vocab_size = len(dataset.word_to_idx)
-        output_dim = len(dataset.mood_to_idx)
-
-        # Load the model
-        model = MoodClassifier(vocab_size = vocab_size, embedding_dim=100, hidden_dim=128, output_dim = output_dim)
-        model.load_state_dict(torch.load('models/mood_classifier.pth'))
-  
-
-        # Perform prediction
-        output = predict_moods(model, dataset, word_lists)
-
-        # Render the template with necessary data
-        return render_template('mood_analysis.html', email=email.replace('_', '.'), output = output)
-
+        word['word'].to_csv(f"/config/workspace/user_data/user_data_{email}.csv", index = False)
+        return predict_mood(f"/config/workspace/user_data/user_data_{email}.csv")
+        
     except Exception as e:
         # log_exception(e)
+        print(e)
         return "An error occurred. Please try again later.", 500
 
+
+
+def predict_mood(csv_file):
+    # Read the CSV file
+    with open(csv_file, 'r', encoding='utf-8-sig') as f:
+        csv_input = csv.reader(f)
+        
+        # Extract sentences from CSV
+        sentences = [row[0] for row in csv_input]
+
+        # Vectorize the input
+        input_vector = vectorizer.transform(sentences)
+
+        # Predict the mood for each sentence
+        moods = model.predict(input_vector)
+
+        # Calculate percentages of each mood
+        mood_counts = pd.Series(moods).value_counts(normalize=True)
+        print(mood_counts)
+
+        # Get overall mood
+        overall_mood = mood_counts.idxmax()
+
+        # Prepare response
+        results = {
+            'overall_mood': overall_mood,
+            'Normal_percentage': round(mood_counts.get('Normal', 0) * 100, 2),
+            'happiness_percentage': round(mood_counts.get('Happy', 0) * 100, 2),
+            'sadness_percentage': round(mood_counts.get('Sad', 0) * 100, 2),
+            'stress_percentage': round(mood_counts.get('Stressed', 0) * 100, 2)
+        }
+
+        return render_template('major1.html', results=results)
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-    
+    app.run(host='0.0.0.0', port=5000 , debug=True)

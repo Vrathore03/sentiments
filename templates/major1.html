@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mood Prediction</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@1.0.0"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+       
+        
+        .container {
+            margin-top: 50px;
+           
+        }
+        .container h1{
+            font-family: "Poppins", sans-serif;
+            /* text-transform: uppercase; */
+            color: #fff;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+        }
+        .chart-container canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .text-center{
+            font-size: 50px;
+            font-weight: 700;
+    
+        }
+
+        .col-md-6{
+            font-family: "Jersey 25", sans-serif;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 25px;
+            top: 65px;
+            left: 50px;
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.8);
+            /* background-color: rgba(128, 128, 128, 0.121); */
+            backdrop-filter: blur(20px);
+            
+        }
+
+        .col-md-6 p{
+            color:bisque;
+        }
+        .video {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.4);
+            filter: brightness(0.7);
+            filter: opacity(0.9);
+            filter:drop-shadow(0.5);
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="video"><video src="templates/Brain_Neurons.mp4" autoplay loop muted plays-inline  width="100%" height="100%"></video></div>
+    
+    <div class="container">
+        <h1 class="text-center">Student Mood Prediction</h1>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="chart-container">
+                    <canvas id="moodChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Overall Mood: {{ results.overall_mood }}</p>
+                <p>Normal Percentage: {{ results.Normal_percentage }}%</p>
+                <p>Happiness Percentage: {{ results.happiness_percentage }}%</p>
+                <p>Sadness Percentage: {{ results.sadness_percentage }}%</p>
+                <p>Stress Percentage: {{ results.stress_percentage }}%</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    var ctx = document.getElementById('moodChart').getContext('2d');
+    var moodChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Normal', 'Happiness', 'Sadness', 'Stress'],
+            datasets: [{
+                data: [{{ results.Normal_percentage }}, {{ results.happiness_percentage }}, {{ results.sadness_percentage }}, {{ results.stress_percentage }}],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Student Mood Prediction'
+                },
+                datalabels: {
+                    color: '#000',
+                    display: function(context) {
+                        return context.dataset.data[context.dataIndex] > 1; // Only show labels for values greater than 1
+                    },
+                    font: {
+                        weight: 'bold'
+                    },
+                    formatter: function(value, context) {
+                        return context.chart.data.labels[context.dataIndex] + ': ' + value + '%';
+                    }
+                }
+            }
+        }
+    });
+});
+
+
+    </script>
+</body>
+</html>

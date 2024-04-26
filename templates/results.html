@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mood Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@1.0.0"></script>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+        }
+        .chart-container canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Student Mood Prediction</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="chart-container">
+                    <canvas id="moodChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Overall Mood: {{ results.overall_mood }}</p>
+                <p>Normal Percentage: {{ results.Normal_percentage }}%</p>
+                <p>Happiness Percentage: {{ results.happiness_percentage }}%</p>
+                <p>Sadness Percentage: {{ results.sadness_percentage }}%</p>
+                <p>Stress Percentage: {{ results.stress_percentage }}%</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    var ctx = document.getElementById('moodChart').getContext('2d');
+    var moodChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Normal', 'Happiness', 'Sadness', 'Stress'],
+            datasets: [{
+                data: [{{ results.Normal_percentage }}, {{ results.happiness_percentage }}, {{ results.sadness_percentage }}, {{ results.stress_percentage }}],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Student Mood Prediction'
+                },
+                datalabels: {
+                    color: '#000',
+                    display: function(context) {
+                        return context.dataset.data[context.dataIndex] > 1; // Only show labels for values greater than 1
+                    },
+                    font: {
+                        weight: 'bold'
+                    },
+                    formatter: function(value, context) {
+                        return context.chart.data.labels[context.dataIndex] + ': ' + value + '%';
+                    }
+                }
+            }
+        }
+    });
+});
+
+
+    </script>
+</body>
+</html>

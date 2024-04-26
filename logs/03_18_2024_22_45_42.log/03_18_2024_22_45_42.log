@@ -1,7 +1,0 @@
-2024-03-18 22:45:42,538 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:8000
- * Running on http://172.18.0.8:8000
-2024-03-18 22:45:42,538 - INFO - [33mPress CTRL+C to quit[0m
-2024-03-18 22:46:34,637 - INFO - 172.18.0.45 - - [18/Mar/2024 22:46:34] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-03-18 22:46:35,986 - INFO - 172.18.0.45 - - [18/Mar/2024 22:46:35] "GET /typed_words?email=test7@gmail.com HTTP/1.1" 200 -
