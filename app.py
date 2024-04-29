@@ -123,7 +123,7 @@ def predict_mood(csv_file):
             'stress_percentage': round(mood_counts.get('Stressed', 0) * 100, 2)
         }
 
-        return render_template('major1.html', results=results)
+        return render_template('results.html', results=results)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000 , debug=True)
+    app.run(host='0.0.0.0', port=5001 , debug=True)
